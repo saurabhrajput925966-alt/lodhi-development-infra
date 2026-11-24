@@ -195,4 +195,318 @@ footer{text-align:center;padding:25px;background:#05080e;color:#777}
 .loginbox button{width:100%;padding:13px;margin-top:12px;border:0;background:#d8b66a;border-radius:6px;font-weight:bold}
 .empty{text-align:center;color:#999;padding:35px}
 @media(max-width:600px){header{padding:15px 4%
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lodhi Properties | Buy & Sell</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Arial,sans-serif;
+  background:#080b12;
+  color:white;
+}
+header{
+  padding:20px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#0e1420;
+  border-bottom:1px solid #c9a75c;
+  position:sticky;top:0;z-index:5;
+}
+.logo{font-size:24px;font-weight:bold;color:#d6b66c}
+.logo span{color:white}
+nav a{color:white;text-decoration:none;margin-left:20px;font-size:14px}
+.hero{
+  min-height:480px;
+  display:flex;align-items:center;
+  padding:60px 7%;
+  background:linear-gradient(90deg,#080b12 10%,rgba(8,11,18,.78) 55%,rgba(8,11,18,.1)),
+  url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=90') center/cover;
+}
+.hero h1{font-size:clamp(36px,6vw,68px);margin-bottom:18px}
+.hero h1 span{color:#d6b66c}
+.hero p{color:#ddd;font-size:17px;line-height:1.7;max-width:550px}
+.btn{
+  display:inline-block;background:#d6b66c;color:#111;
+  padding:13px 22px;border:0;border-radius:6px;
+  text-decoration:none;font-weight:bold;cursor:pointer;margin-top:22px;
+}
+.section{padding:55px 7%}
+.section-title{text-align:center;margin-bottom:30px}
+.section-title h2{font-size:34px;color:#d6b66c;margin-bottom:10px}
+.section-title p{color:#aaa}
+.filters{
+  display:flex;flex-wrap:wrap;gap:10px;
+  justify-content:center;margin-bottom:25px
+}
+.filters input,.filters select{
+  padding:13px;border-radius:7px;border:1px solid #30394a;
+  background:#121a27;color:white;min-width:180px
+}
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:22px
+}
+.card{
+  background:#111824;border:1px solid #283244;border-radius:12px;
+  overflow:hidden;transition:.25s
+}
+.card:hover{transform:translateY(-5px);border-color:#d6b66c}
+.card img{width:100%;height:220px;object-fit:cover;background:#222}
+.card-body{padding:18px}
+.price{color:#d6b66c;font-size:25px;font-weight:bold;margin-bottom:8px}
+.card h3{font-size:20px;margin-bottom:8px}
+.location{color:#aaa;margin-bottom:14px;font-size:14px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.tag{background:#202a39;padding:7px 10px;border-radius:5px;font-size:12px;color:#ddd}
+.card-actions{display:flex;gap:9px;margin-top:15px}
+.card-actions a{flex:1;text-align:center;padding:11px 8px;border-radius:5px;text-decoration:none;font-size:13px;font-weight:bold}
+.whatsapp{background:#25d366;color:#07110a}
+.call{background:#d6b66c;color:#111}
+.add-section{background:#0e1420;border-top:1px solid #242e3e}
+.form-box{max-width:750px;margin:auto;background:#141d2a;padding:25px;border-radius:12px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-box input,.form-box select,.form-box textarea{
+  width:100%;padding:13px;background:#0a101a;
+  color:white;border:1px solid #30394a;border-radius:6px;margin-bottom:12px
+}
+.form-box textarea{height:100px;resize:vertical}
+.form-box button{width:100%;padding:15px;border:none;border-radius:6px;background:#d6b66c;font-weight:bold;font-size:16px;cursor:pointer}
+.contacts{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;max-width:750px;margin:auto
+}
+.contact-card{text-align:center;background:#141d2a;padding:30px;border-radius:12px;border:1px solid #30394a}
+.contact-card h3{margin-bottom:12px}
+.contact-card p{color:#d6b66c;font-size:18px}
+.contact-card a{color:#d6b66c;text-decoration:none}
+footer{text-align:center;padding:25px;background:#060910;color:#777;border-top:1px solid #252e3c}
+.empty{text-align:center;color:#aaa;padding:30px;grid-column:1/-1}
+@media(max-width:600px){
+ header{padding:16px 5%}
+ nav a{margin-left:8px;font-size:12px}
+ .logo{font-size:19px}
+ .hero{padding:45px 5%;min-height:390px}
+ .section{padding:40px 5%}
+ .form-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">LODHI <span>PROPERTIES</span></div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#properties">Properties</a>
+    <a href="#sell">Sell Property</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <h1>Find Your <span>Dream Property</span></h1>
+    <p>Discover premium residential and commercial properties.
+    Buy, sell or invest with trusted property assistance.</p>
+    <a href="#properties" class="btn">Explore Properties</a>
+    <a href="#sell" class="btn">List Your Property</a>
+  </div>
+</section>
+
+<section class="section" id="properties">
+  <div class="section-title">
+    <h2>Featured Properties</h2>
+    <p>Find houses, plots, flats and commercial spaces</p>
+  </div>
+
+  <div class="filters">
+    <input id="search" placeholder="Search city or property..." oninput="render()">
+    <select id="type" onchange="render()">
+      <option value="">All Property Types</option>
+      <option>House</option>
+      <option>Plot</option>
+      <option>Flat</option>
+      <option>Commercial</option>
+      <option>Farm</option>
+    </select>
+    <select id="deal" onchange="render()">
+      <option value="">Buy & Sell</option>
+      <option>For Sale</option>
+      <option>For Rent</option>
+    </select>
+  </div>
+
+  <div class="grid" id="listings"></div>
+</section>
+
+<section class="section add-section" id="sell">
+  <div class="section-title">
+    <h2>Add Your Property</h2>
+    <p>Submit your property details to list it on our website</p>
+  </div>
+
+  <div class="form-box">
+    <form id="propertyForm">
+      <div class="form-grid">
+        <input id="title" placeholder="Property Title" required>
+        <select id="propertyType" required>
+          <option value="">Property Type</option>
+          <option>House</option>
+          <option>Plot</option>
+          <option>Flat</option>
+          <option>Commercial</option>
+          <option>Farm</option>
+        </select>
+
+        <select id="listingType" required>
+          <option>For Sale</option>
+          <option>For Rent</option>
+        </select>
+
+        <input id="price" placeholder="Price (₹)" required>
+        <input id="city" placeholder="City / Location" required>
+        <input id="area" placeholder="Area / Size (e.g. 1200 Sq Ft)">
+        <input id="image" placeholder="Property Image URL">
+        <input id="owner" placeholder="Owner Name">
+        <input id="phone" placeholder="Owner Contact Number">
+      </div>
+      <textarea id="description" placeholder="Property details, bedrooms, facilities, etc."></textarea>
+      <button type="submit">+ Add Property</button>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="section-title">
+    <h2>Contact Us</h2>
+    <p>For property purchase, sale, rent or any property related information</p>
+  </div>
+
+  <div class="contacts">
+    <div class="contact-card">
+      <h3>Lovekesh Lodhi</h3>
+      <p>7055570306</p>
+      <div class="card-actions">
+        <a class="call" href="tel:7055570306">Call Now</a>
+        <a class="whatsapp" href="https://wa.me/917055570306" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <h3>Vishnu Lodhi</h3>
+      <p>9149300703</p>
+      <div class="card-actions">
+        <a class="call" href="tel:9149300703">Call Now</a>
+        <a class="whatsapp" href="https://wa.me/919149300703" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Lodhi Properties | Buy • Sell • Rent • Invest
+</footer>
+
+<script>
+const defaultImage =
+"https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=85";
+
+let properties = JSON.parse(localStorage.getItem("lodhiProperties") || "[]");
+
+function save(){
+  localStorage.setItem("lodhiProperties",JSON.stringify(properties));
+}
+
+function money(value){
+  let n=Number(value);
+  if(n>=10000000) return "₹"+(n/10000000).toFixed(2)+" Cr";
+  if(n>=100000) return "₹"+(n/100000).toFixed(2)+" Lac";
+  return "₹"+n.toLocaleString("en-IN");
+}
+
+function render(){
+  let q=document.getElementById("search").value.toLowerCase();
+  let t=document.getElementById("type").value;
+  let d=document.getElementById("deal").value;
+  let box=document.getElementById("listings");
+
+  let filtered=properties.filter(p=>
+    (p.title+" "+p.city+" "+p.type).toLowerCase().includes(q)&&
+    (!t||p.type===t)&&(!d||p.deal===d)
+  );
+
+  if(!filtered.length){
+    box.innerHTML='<div class="empty">No properties listed yet. Add your property below!</div>';
+    return;
+  }
+
+  box.innerHTML=filtered.map(p=>{
+    let number=(p.phone||"").replace(/\D/g,"");
+    let wa=number? "https://wa.me/91"+number.replace(/^91/,"") : "https://wa.me/917055570306";
+    let img=p.image||defaultImage;
+    return `
+    <div class="card">
+      <img src="${img}" onerror="this.src='${defaultImage}'">
+      <div class="card-body">
+        <div class="price">${money(p.price)}</div>
+        <h3>${escapeHTML(p.title)}</h3>
+        <div class="location">📍 ${escapeHTML(p.city)}</div>
+        <div class="tags">
+          <span class="tag">${escapeHTML(p.type)}</span>
+          <span class="tag">${escapeHTML(p.deal)}</span>
+          ${p.area?<span class="tag">${escapeHTML(p.area)}</span>:""}
+        </div>
+        <p style="color:#bbb;line-height:1.6">${escapeHTML(p.description||"Contact us for more property information.")}</p>
+        <div class="card-actions">
+          <a class="call" href="tel:${number||"7055570306"}">Call</a>
+          <a class="whatsapp" href="${wa}" target="_blank">WhatsApp Inquiry</a>
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+function escapeHTML(str){
+  return String(str||"").replace(/[&<>"']/g,m=>({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[m]));
+}
+
+document.getElementById("propertyForm").addEventListener("submit",function(e){
+  e.preventDefault();
+
+  let p={
+    id:Date.now(),
+    title:document.getElementById("title").value,
+    type:document.getElementById("propertyType").value,
+    deal:document.getElementById("listingType").value,
+    price:document.getElementById("price").value.replace(/[^\d]/g,""),
+    city:document.getElementById("city").value,
+    area:document.getElementById("area").value,
+    image:document.getElementById("image").value,
+    owner:document.getElementById("owner").value,
+    phone:document.getElementById("phone").value,
+    description:document.getElementById("description").value
+  };
+
+  properties.unshift(p);
+  save();
+  render();
+  this.reset();
+  alert("Property added successfully!");
+  document.getElementById("properties").scrollIntoView({behavior:"smooth"});
+});
+
+render();
+</script>
+</body>
+</html>                               
+                               
 
