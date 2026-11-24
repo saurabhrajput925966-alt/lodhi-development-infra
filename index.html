@@ -94,7 +94,6 @@ footer a{color:#ffbe26}
 <button type="submit">＋ ADD PROPERTY</button>
 </form>
 </section>
-<a href="mailto:info@lodhidevelopers.in">✉️ info@lodhidevelopers.in</a>
 </div>
 </section>
 <script>
@@ -110,16 +109,7 @@ function show(list){
 let el=document.getElementById("cards");
 el.innerHTML="";
 if(!list.length){el.innerHTML="<p>No properties found.</p>";return}
-list.forEach(p=>{
-el.innerHTML+=`<div class="card">
-<img src="${p.img||'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80'}">
-<div class="info"><div class="price">${p.price}</div>
-<h3>${p.title}</h3><p>📍 ${p.city}</p>
-<p>${p.type} • ${p.mode}</p><p>${p.details||""}</p>
-<a href="https://wa.me/917055570306?text=${encodeURIComponent('I am interested in '+p.title+' in '+p.city)}"><button>WhatsApp Enquiry</button></a>
-</div></div>`;
-});
-}
+list.forEach(p
 function search(){
 let c=document.getElementById("citySearch").value.toLowerCase();
 let t=document.getElementById("typeSearch").value;
@@ -134,6 +124,7 @@ localStorage.setItem("lodhiListings",JSON.stringify(added));
 e.target.reset();
 show(all());
 alert("Property added to this browser!");
+  
 });
 show(all());
 </script>
@@ -144,13 +135,6 @@ show(all());
 
 <div style="background:white;padding:15px;border-radius:12px;margin:15px auto;max-width:400px">
 <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" style="width:100%;border-radius:10px">
-<h3>Residential Plot for Sale</h3>
-<p>📍 Location: Your City</p>
-<p>📐 Size: 1000 Sq.ft.</p>
-<p>💰 Price: ₹15,00,000</p>
-<p>Property Type: Plot</p>
-<a href="https://wa.me/919149300703?text=I%20am%20interested%20in%20this%20property" style="display:block;background:#198754;color:white;text-align:center;padding:12px;border-radius:8px;text-decoration:none">WhatsApp for Details</a>
-</div>
 </section>
 <section style="background:#102f50;color:white;padding:35px 20px;text-align:center;border-radius:14px">
   <h2 style="color:#f0c66a">Contact Us</h2>
