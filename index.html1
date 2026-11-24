@@ -3,212 +3,147 @@ Lodhi Development & Indra Pvt. Ltd. - Property buying, selling and real estate m
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Buy, sell, rent and discover premium properties with Lodhi Development & Infra Pvt. Ltd.">
-<title>Lodhi Development & Infra | Real Estate</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lodhi Developers & Infra Pvt. Ltd.</title>
 <style>
-:root{
- --navy:#102b46;--navy2:#183d61;--gold:#d6ad59;
- --bg:#f5f7fa;--white:#fff;--text:#1c2b3a;--muted:#6e7b89;
-}
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
-a{text-decoration:none}
-button{cursor:pointer;font-family:inherit}
-.topbar{background:var(--navy);color:white;padding:15px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
-.brand{font-weight:900;font-size:19px;color:var(--gold);letter-spacing:.5px}
-.nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
-.nav a{color:white;font-size:14px}
-.nav .navbtn{background:var(--gold);color:var(--navy);padding:11px 16px;border-radius:8px;font-weight:bold}
-.hero{min-height:450px;padding:75px 6%;display:flex;align-items:center;background:linear-gradient(90deg,#071c31ee,#102b46aa),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=90') center/cover;color:white}
-.hero-content{max-width:850px}
-.eyebrow{color:var(--gold);font-weight:bold;letter-spacing:2px;text-transform:uppercase;font-size:13px}
-.hero h1{font-size:clamp(34px,6vw,64px);line-height:1.12;margin:16px 0}
-.hero p{color:#dbe5ef;font-size:17px;line-height:1.7}
-.gold{color:var(--gold)}
-.searchbox{background:white;border-radius:14px;padding:14px;margin-top:28px;display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:10px;box-shadow:0 12px 30px #0002}
-input,select,textarea{width:100%;padding:13px;border:1px solid #e0e5ea;border-radius:8px;background:white;font-size:14px}
-.btn{background:var(--gold);color:var(--navy);border:0;border-radius:8px;padding:13px 18px;font-weight:bold}
-.btn-dark{background:var(--navy);color:white}
-.btn-outline{border:1px solid #ccd4dc;background:white;color:var(--navy);border-radius:8px;padding:11px 16px;font-weight:bold}
-section{padding:65px 6%}
-.sectionhead{text-align:center;margin-bottom:30px}
-.sectionhead h2{font-size:32px;margin:0 0 10px;color:var(--navy)}
-.sectionhead p{color:var(--muted);margin:0}
-.filters{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:24px 0}
-.filters button{border:1px solid #dce2e8;background:white;color:var(--navy);border-radius:30px;padding:10px 19px}
-.filters button.active{background:var(--navy);color:white}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.card{background:white;border-radius:14px;overflow:hidden;border:1px solid #e9edf1;box-shadow:0 7px 24px #0b254510;transition:.2s}
-.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px #0b254518}
-.photo{height:230px;position:relative;background:#dce3ea}
-.photo img{width:100%;height:100%;object-fit:cover}
-.tag{position:absolute;left:14px;top:14px;background:var(--gold);color:var(--navy);padding:7px 11px;border-radius:5px;font-size:12px;font-weight:bold}
-.cardbody{padding:18px}
-.price{font-size:23px;font-weight:800;color:var(--navy)}
-.cardbody h3{margin:10px 0;font-size:18px}
-.location{color:var(--muted);font-size:14px}
-.specs{display:flex;gap:15px;flex-wrap:wrap;padding:12px 0;border-top:1px solid #edf0f3;border-bottom:1px solid #edf0f3;color:#667789;font-size:13px;margin:14px 0}
-.cardactions{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.cardactions a{display:block;text-align:center}
-.empty{text-align:center;color:var(--muted);padding:35px}
-.stats{background:var(--navy);color:white;display:grid;grid-template-columns:repeat(3,1fr);text-align:center;gap:20px}
-.stats strong{display:block;font-size:30px;color:var(--gold);margin-bottom:8px}
-.stats div{color:#dce6ef}
-.about{background:#fff}
-.aboutwrap{max-width:850px;margin:auto;text-align:center;line-height:1.8;color:#5c6b79}
-.listing{background:#eef2f6}
-.formwrap{max-width:900px;margin:auto;background:white;border-radius:16px;padding:26  
-  <style>
-.sell-banner {
-  background: linear-gradient(120deg, #07529b, #1475c9);
-  color: #fff;
-  padding: 45px 5%;
-  border-radius: 0 0 28px 28px;
-  font-family: Arial, sans-serif;
-}
-.sell-banner h2 {
-  font-size: 35px;
-  margin: 0 0 15px;
-}
-.sell-banner p {
-  max-width: 650px;
-  line-height: 1.8;
-  color: #e7f2ff;
-}
-.sell-actions {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 25px;
-}
-.sell-btn {
-  padding: 15px 25px;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-}
-.sell-yellow {
-  background: #ffc928;
-  color: #12365c;
-}
-.sell-outline {
-  border: 2px solid white;
-  color: white;
-}
-.lodhi-footer {
-  background: linear-gradient(120deg, #063c70, #0873bd);
-  color: white;
-  padding: 45px 5%;
-  font-family: Arial, sans-serif;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 30px;
-}
-.footer-grid h3 {
-  margin-bottom: 20px;
-  font-size: 18px;
-}
-.footer-grid p,
-.footer-grid a {
-  color: #e0edff;
-  font-size: 14px;
-  line-height: 1.9;
-  text-decoration: none;
-}
-.footer-grid a:hover {
-  color: #ffd13b;
-}
-.footer-contact a {
-  display: block;
-  margin: 10px 0;
-}
-.footer-bottom {
-  border-top: 1px solid #ffffff30;
-  margin-top: 30px;
-  padding-top: 20px;
-  text-align: center;
-  color: #d7e9ff;
-  font-size: 13px;
-}
+body{margin:0;font-family:Arial;background:#f5f7fa;color:#172b46}
+header{background:#0c315c;color:white;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo{font-weight:bold;color:#ffbe26;font-size:19px}
+nav a{color:white;text-decoration:none;margin:8px;font-size:14px}
+.hero{padding:65px 5%;color:white;background:linear-gradient(90deg,#082849dd,#0b4479cc),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1500&q=80') center/cover}
+.hero h1{font-size:42px;max-width:750px}
+.hero p{font-size:17px}
+.search,.formbox{background:white;padding:18px;border-radius:12px;display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+input,select,textarea{padding:12px;border:1px solid #ddd;border-radius:6px;flex:1;min-width:140px}
+button,.btn{background:#ffb91f;color:#122d4d;border:0;padding:13px 18px;border-radius:7px;font-weight:bold;cursor:pointer}
+section{padding:45px 5%}
+h2{text-align:center}
+.filters{text-align:center;margin:20px}
+.filters button{margin:4px;background:white;border:1px solid #ccc}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 4px 14px #0001}
+.card img{width:100%;height:200px;object-fit:cover}
+.info{padding:16px}
+.price{color:#bc8500;font-size:23px;font-weight:bold}
+.card p{color:#666}
+.card button{margin-top:8px}
+.form-section{background:#eaf0f6}
+.formbox{max-width:900px;margin:20px auto;display:grid;grid-template-columns:repeat(2,1fr)}
+.formbox textarea{grid-column:span 2}
+.formbox button{grid-column:span 2}
+footer{background:#082849;color:white;padding:35px 5%;text-align:center}
+footer a{color:#ffbe26}
+@media(max-width:600px){.hero h1{font-size:29px}.formbox{grid-template-columns:1fr}.formbox textarea,.formbox button{grid-column:span 1}nav{margin-top:10px}}
 </style>
+</head>
+<body>
 
-<section class="sell-banner">
-  <h2>Sell Your Property With Us!</h2>
+<header>
+<div class="logo">🏛️ LODHI DEVELOPERS & INFRA</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#properties">Properties</a>
+<a href="#list">List Property</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-  <p>
-    List your property with photos, location, price and complete details —
-    absolutely free. Our team reviews every listing before it appears on the site.
-  </p>
+<div class="hero" id="home">
+<h1>LODHI DEVELOPERS & INFRA PVT. LTD.</h1>
+<h3 style="color:#ffbe26">Your Dream Property, Our Responsibility!</h3>
+<p>Buy • Sell • Rent • Invest — Find your property across India.</p>
+<div class="search">
+<input id="citySearch" placeholder="City / Location">
+<select id="typeSearch">
+<option value="">All Types</option>
+<option>House</option><option>Apartment</option>
+<option>Plot</option><option>Commercial</option>
+</select>
+<button onclick="search()">SEARCH PROPERTY</button>
+</div>
+</div>
 
-  <p style="color:#ffd438;font-weight:bold;">
-    No fees. No subscription. No hidden charges.
-  </p>
-
-  <div class="sell-actions">
-    <a href="#list-property" class="sell-btn sell-yellow">
-      + LIST YOUR PROPERTY
-    </a>
-
-    <a href="#properties" class="sell-btn sell-outline">
-      BROWSE PROPERTIES
-    </a>
-  </div>
+<section id="properties">
+<h2>🏠 Available Properties</h2>
+<div class="filters">
+<button onclick="filterType('')">All</button>
+<button onclick="filterType('Buy')">Buy</button>
+<button onclick="filterType('Rent')">Rent</button>
+</div>
+<div class="grid" id="cards"></div>
 </section>
 
-<footer class="lodhi-footer">
-  <div class="footer-grid">
+<section class="form-section" id="list">
+<h2>＋ List Your Property</h2>
+<p style="text-align:center">Fill details below to add your property listing</p>
+<form class="formbox" id="propertyForm">
+<input id="pTitle" placeholder="Property Title" required>
+<input id="pCity" placeholder="City / Location" required>
+<select id="pType" required>
+<option value="">Property Type</option>
+<option>House</option><option>Apartment</option>
+<option>Plot</option><option>Commercial</option>
+</select>
+<select id="pMode">
+<option>Buy</option><option>Rent</option>
+</select>
+<input id="pPrice" placeholder="Price (₹)" required>
+<input id="pDetails" placeholder="Area / Bedrooms / Details">
+<input id="pImage" placeholder="Image URL (optional)">
+<textarea id="pDesc" placeholder="Property Description"></textarea>
+<button type="submit">＋ ADD PROPERTY</button>
+</form>
+</section>
 
-    <div>
-      <h3>🏠 LODHI DEVELOPERS<br>& INFRA PVT. LTD.</h3>
-      <p>
-        A free all-India property marketplace.<br>
-        Buy, sell and invest with confidence —
-        no subscription, no membership fees.
-      </p>
-    </div>
-
-    <div>
-      <h3>EXPLORE</h3>
-      <p><a href="#properties">All Properties</a></p>
-      <p><a href="#buy">Buy Property</a></p>
-      <p><a href="#list-property">Sell Property</a></p>
-      <p><a href="#login">Seller Login</a></p>
-    </div>
-
-    <div>
-      <h3>COMPANY</h3>
-      <p><a href="#about">About Us</a></p>
-      <p><a href="#contact">Contact</a></p>
-    </div>
-
-    <div class="footer-contact" id="contact">
-      <h3>GET IN TOUCH</h3>
-
-      <a href="tel:7055570306">
-        📞 लोवकेश लोधी: 7055570306
-      </a>
-
-      <a href="tel:9149300703">
-        📞 विष्णु लोधी: 9149300703
-      </a>
-
-      <a href="mailto:info@lodhidevelopers.in">
-        ✉️ info@lodhidevelopers.in
-      </a>
-
-      <a href="https://wa.me/917055570306">
-        🟢 WhatsApp Us
-      </a>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 LODHI DEVELOPERS & INFRA PVT. LTD.
-    All Rights Reserved.
-  </div>
-</footer>
+<section id="contact">
+<h2>Contact Our Team</h2>
+<p style="text-align:center">Call us for property details, buying or selling.</p>
+<div style="text-align:center;line-height:2.2">
+<a href="tel:7055570306">📞 7055570306</a><br>
+<a href="tel:9149300703">📞 9149300703</a><br>
+<a href="mailto:info@lodhidevelopers.in">✉️ info@lodhidevelopers.in</a>
+</div>
+</sectin
+<script>
+const sample=[
+{title:"Luxury Family House",city:"Delhi",type:"House",mode:"Buy",price:"₹85,00,000",details:"3 BHK • 1800 Sq Ft",img:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"},
+{title:"Premium Apartment",city:"Noida",type:"Apartment",mode:"Buy",price:"₹45,00,000",details:"2 BHK • 1200 Sq Ft",img:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"},
+{title:"Residential Plot",city:"Gurugram",type:"Plot",mode:"Buy",price:"₹25,00,000",details:"200 Sq Yards",img:"https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"}
+];
+let added=JSON.parse(localStorage.getItem("lodhiListings")||"[]");
+let modeFilter="";
+function all(){return [...sample,...added]}
+function show(list){
+let el=document.getElementById("cards");
+el.innerHTML="";
+if(!list.length){el.innerHTML="<p>No properties found.</p>";return}
+list.forEach(p=>{
+el.innerHTML+=`<div class="card">
+<img src="${p.img||'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80'}">
+<div class="info"><div class="price">${p.price}</div>
+<h3>${p.title}</h3><p>📍 ${p.city}</p>
+<p>${p.type} • ${p.mode}</p><p>${p.details||""}</p>
+<a href="https://wa.me/917055570306?text=${encodeURIComponent('I am interested in '+p.title+' in '+p.city)}"><button>WhatsApp Enquiry</button></a>
+</div></div>`;
+});
+}
+function search(){
+let c=document.getElementById("citySearch").value.toLowerCase();
+let t=document.getElementById("typeSearch").value;
+show(all().filter(p=>(!c||p.city.toLowerCase().includes(c))&&(!t||p.type===t)&&(!modeFilter||p.mode===modeFilter)));
+}
+function filterType(t){modeFilter=t;search()}
+document.getElementById("propertyForm").addEventListener("submit",e=>{
+e.preventDefault();
+let p={title:pTitle.value,city:pCity.value,type:pType.value,mode:pMode.value,price:pPrice.value,details:pDetails.value,desc:pDesc.value,img:pImage.value};
+added.unshift(p);
+localStorage.setItem("lodhiListings",JSON.stringify(added));
+e.target.reset();
+show(all());
+alert("Property added to this browser!");
+});
+show(all());
+</script>
+</body>
+</html>
